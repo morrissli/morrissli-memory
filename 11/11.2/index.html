@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Зміна кольору тексту</title>
+    <style>
+        #textBlock {
+            font-size: 24px;
+            color: black;
+            padding: 20px;
+            border: 1px solid #000;
+            width: 50%;
+            margin: 20px auto;
+            text-align: center;
+        }
+        .color-changed {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+<div id="textBlock">Це текст, колір якого змінюється при натисканні кнопки.</div>
+<div style="text-align: center;">
+    <button id="colorButton">Змінити колір тексту</button>
+</div>
+
+<script>
+    const textBlock = document.getElementById("textBlock");
+    const colorButton = document.getElementById("colorButton");
+
+    colorButton.addEventListener("click", () => {
+        textBlock.classList.toggle("color-changed");
+    });
+</script>
+</body>
+</html>
